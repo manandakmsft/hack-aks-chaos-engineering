@@ -6,5 +6,15 @@ As monolithic applications evolved into microservices deployed on Azure Kubernet
 
 To ensure resilience, it’s critical to proactively validate these applications by injecting controlled faults into AKS using Azure Chaos Studio.
 
+## Learning Objectives
+
 In this hack, you will gain hands-on experience with Azure Kubernetes Service—deploying workloads/applications on AKS and leveraging Azure Chaos Studio. You’ll design and run chaos experiments that simulate real-world failure scenarios, helping you measure application resiliency, uncover weaknesses, and re-engineer workloads for improved reliability.
 
+## Challenges
+
+Deploying an AKS cluster
+Deploying a three-tier application on AKS
+Installing Chaos Mesh in AKS and registering the cluster as a target in Azure Chaos Studio
+Designing and executing chaos experiments to simulate failures at the application and AKS worker node levels
+Setting up telemetry and performance dashboards for experiment insights using Azure Monitor and Managed Prometheus/Grafana
+Rearchitecting the application deployment to make it more reliable & resilient against failures
