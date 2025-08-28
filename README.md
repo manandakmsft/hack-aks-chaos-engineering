@@ -20,7 +20,7 @@ In this hack, you will gain hands-on experience with Azure Kubernetes Service—
 	 - Install chaos mesh in AKS and adding AKS cluster as target in Azure Chaos studio
 - Challenge 04: **[Creating and executing chaos experiments to simulate failures at the application and AKS worker node levels](Resources/Challenge-04.md)**
 	 - Create chaos experients using ARM templates and execute the experiemnts to simulate faults in the aplication
-- Challenge 05: **[Setting up telemetry and performance dashboards for experiment insights using Azure Monitor and Managed Prometheus/Grafana](Resources/Challenge-05.md)**
-	 - Setting up telemetry and performance dashboards for experiment insights using Azure Monitor and Managed Prometheus/Grafana
+- Challenge 05: **[Setting up telemetry and performance dashboards for experiment insights using Azure Monitor and Managed Prometheus & Grafana](Resources/Challenge-05.md)**
+	 - Setting up telemetry and performance dashboards for experiment insights using Azure Monitor and Managed Prometheus & Grafana
 - Challenge 06: **[Rearchitecting the application deployment to make it more reliable & resilient against failures](Resources/Challenge-06.md)**
 	 - Based on the results on chaos experiments, re design the application deployment to make it more reliable & resilient against failures
