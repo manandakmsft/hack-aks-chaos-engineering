@@ -24,8 +24,7 @@ Container Images
 	- `kubectl exec -it <mongo pod name> -- mongosh "--version"`
  - Hint: MongoDB runs on port 27017
  - To populate the Data on the Mongo, run a job using the image "whatthehackmsft/content-init". The Job should have the below Env Varibale
-             - name: MONGODB_CONNECTION
-            value: mongodb://mongodb:27017/contentdb
+ - name: MONGODB_CONNECTION and value: mongodb://mongodb:27017/contentdb
 
 ### Deploy the **API app** from the command line using kubectl and YAML files:
 
