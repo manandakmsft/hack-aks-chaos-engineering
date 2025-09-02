@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this challenge, you’ll build and deploy a three-tier app with a MongoDB database at the backend, an API microservice powering the logic, and a sleek front-end (Web) to bring it all together
+In this challenge, you’ll deploy a three-tier app with a MongoDB database at the backend, an API microservice powering the logic, and a sleek front-end (Web) to bring it all together
 
 ## Description
 
