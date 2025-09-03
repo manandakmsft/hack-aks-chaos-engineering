@@ -29,7 +29,7 @@ Container Images
 
 ### Deploy the **API app** from the command line using kubectl and YAML files:
 
-- **NOTE:** Sample YAML files to get you started can be found in the `/Challenge-02/` folder.
+- **NOTE:** Sample YAML files to get you started can be found in the `Manifests/Challenge-02/` folder.
 - Configuration details:
   - Number of pods: 1
   - Service: Internal
@@ -45,7 +45,7 @@ Container Images
  - Create a service with name "content-api" to go with the deployment
    
 ### Deploy the Web app from the command line using kubectl and YAML files
-- **NOTE:** Sample YAML files to get you started can be found in the `/Challenge-02` folder.
+- **NOTE:** Sample YAML files to get you started can be found in the `Manifets/Challenge-02` folder.
 - **NOTE:** The Web app expects to have an environment variable pointing to the URL of the API app named:
 	- `CONTENT_API_URL`
 - Create a deployment yaml file for the Web app using the specs from the API app, except for:
