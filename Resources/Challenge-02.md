@@ -23,6 +23,7 @@ Container Images
 - Confirm it is running with:
 	- `kubectl exec -it <mongo pod name> -- mongosh "--version"`
  - Hint: MongoDB runs on port 27017
+ - Create a service with name "mongodb" to go with the deployment
  - To populate the Data on the Mongo, run a job using the image "whatthehackmsft/content-init". The Job should have the below Env Varibale
  	- name: MONGODB_CONNECTION and value: mongodb://mongodb:27017/contentdb
 
@@ -41,6 +42,7 @@ Container Images
     	- _Hint: Review the kubernetes docs for instructions, or feel free to use a GUI tool_
 	- From the terminal, curl the url of the `/speakers` end point.
 	- You should get a huge json document in response.
+ - Create a service with name "content-api" to go with the deployment
    
 ### Deploy the Web app from the command line using kubectl and YAML files
 - **NOTE:** Sample YAML files to get you started can be found in the `/Challenge-02` folder.
@@ -48,8 +50,8 @@ Container Images
 	- `CONTENT_API_URL`
 - Create a deployment yaml file for the Web app using the specs from the API app, except for:
 	- Port and Target Port: 3000
-- Create a service yaml file to go with the deployment
-	- **Hint:** Not all "types" of Services are exposed to the outside world
+- Create a service yaml to go with the deployment
+	- **Hint:** Not all "types" of Services are exposed to the outside world. Make the service Type "LoadBalancer"
 - **NOTE:** Applying your YAML files with kubectl can be done over and over as you update the YAML file. Only the delta will be changed.
 - **NOTE:** The Kubernetes documentation site is your friend. The full YAML specs can be found there: <https://kubernetes.io/docs>
 - Find out the External IP that was assigned to your service. You can use kubectl for this, or you can look at 'Services' in the Azure portal.
