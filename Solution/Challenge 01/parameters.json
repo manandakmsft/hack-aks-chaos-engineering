@@ -1,0 +1,125 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "apiVersion": {
+            "value": "2025-05-01"
+        },
+        "resourceName": {
+            "value": "aks-hackathon1"
+        },
+        "location": {
+            "value": "westus3"
+        },
+        "dnsPrefix": {
+            "value": "aks-hackathon-dns"
+        },
+        "kubernetesVersion": {
+            "value": "1.32.6"
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "nodeResourceGroup": {
+            "value": "MC_aks-hackathon_aks-hackathon_westus3"
+        },
+        "clusterSku": {
+            "value": {
+                "name": "Base",
+                "tier": "Standard"
+            }
+        },
+        "upgradeChannel": {
+            "value": "patch"
+        },
+        "clusterIdentity": {
+            "value": {
+                "type": "SystemAssigned"
+            }
+        },
+        "adminGroupObjectIDs": {
+            "value": []
+        },
+        "disableLocalAccounts": {
+            "value": false
+        },
+        "azureRbac": {
+            "value": false
+        },
+        "enableOmsAgent": {
+            "value": true
+        },
+        "isAvailabilityZoneEnabled": {
+            "value": true
+        },
+        "supportPlan": {
+            "value": "KubernetesOfficial"
+        },
+        "nodeOSUpgradeChannel": {
+            "value": "NodeImage"
+        },
+        "isPrivateClusterSupported": {
+            "value": true
+        },
+        "enablePrivateCluster": {
+            "value": false
+        },
+        "networkPluginMode": {
+            "value": "overlay"
+        },
+        "networkDataplane": {
+            "value": "azure"
+        },
+        "isAzurePolicySupported": {
+            "value": true
+        },
+        "enableAzurePolicy": {
+            "value": true
+        },
+        "nodeAutoProvisioningMode": {
+            "value": "Manual"
+        },
+        "isSecretStoreCSIDDriverSupported": {
+            "value": true
+        },
+        "enableSecretStoreCSIDriver": {
+            "value": false
+        },
+        "vmssNodePool": {
+            "value": true
+        },
+        "workspaceName": {
+            "value": "hackathon-la"
+        },
+        "workspaceRegion": {
+            "value": "westus3"
+        },
+        "omsWorkspaceId": {
+            "value": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/DefaultResourceGroup-WUS3/providers/Microsoft.OperationalInsights/workspaces/hackathon-la"
+        },
+        "isImageCleanerEnabled": {
+            "value": false
+        },
+        "imageCleanerIntervalHours": {
+            "value": 168
+        },
+        "enableOIDC": {
+            "value": true
+        },
+        "issuerURL": {
+            "value": ""
+        },
+        "enableWorkloadIdentity": {
+            "value": true
+        },
+        "clusterTags": {
+            "value": {}
+        },
+        "tagsForAllResources": {
+            "value": {}
+        }
+    }
+}
