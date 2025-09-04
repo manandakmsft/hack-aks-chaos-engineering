@@ -12,7 +12,7 @@ In this challenge, you will create experiments that mimic real world faults and 
 
 - Experiment 01: **Spike the content-api pod CPU to 100**
    - Use system assigned identity & built in roles for experiment Permissions
-	 - Use "chaos mesh stress chaos" fault for this experiment
+   - Use "chaos mesh stress chaos" fault for this experiment
    - Use the json file in `/manifest/Challenge 04/` folder to create the experiment
    - Select the AKS cluster as Target Resource.
 
