@@ -707,7 +707,7 @@
             "name": "aks-monitoring-msi-dcr-500db7fd-1b03-300f-33a0-f06dc0d5bbff",
             "apiVersion": "2021-04-01",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "[concat('Microsoft.Resources/deployments/', 'WorkspaceDeployment-20250902224157-59')]"
             ],
@@ -723,7 +723,7 @@
                             "apiVersion": "2022-06-01",
                             "type": "Microsoft.Insights/dataCollectionRules",
                             "location": "[parameters('workspaceRegion')]",
-                            "name": "MSCI-westus3-aks-hackathon",
+                            "name": "MSCI-westus3-hackathon",
                             "tags": "[parameters('tagsForAllResources')]",
                             "kind": "Linux",
                             "properties": {
@@ -782,7 +782,7 @@
             "name": "aks-monitoring-msi-dcra-f2a187b1-e841-4c2e-a242-3542891fb6ff",
             "apiVersion": "2021-04-01",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "[concat('Microsoft.ContainerService/managedClusters/', parameters('resourceName'))]",
                 "[concat('Microsoft.Resources/deployments/', 'aks-monitoring-msi-dcr-500db7fd-1b03-300f-33a0-f06dc0d5bbff')]"
@@ -797,11 +797,11 @@
                     "resources": [
                         {
                             "type": "Microsoft.ContainerService/managedClusters/providers/dataCollectionRuleAssociations",
-                            "name": "[concat('aks-hackathon', '/microsoft.insights/', 'ContainerInsightsExtension')]",
+                            "name": "[concat('hackathon', '/microsoft.insights/', 'ContainerInsightsExtension')]",
                             "apiVersion": "2022-06-01",
                             "properties": {
                                 "description": "Association of data collection rule. Deleting this association will break the data collection for this AKS Cluster.",
-                                "dataCollectionRuleId": "[resourceId('b491bf98-6ea2-4a07-a641-200d61d7a735', 'aks-hackathon', 'Microsoft.Insights/dataCollectionRules', 'MSCI-westus3-aks-hackathon')]"
+                                "dataCollectionRuleId": "[resourceId('b491bf98-6ea2-4a07-a641-200d61d7a735', 'hackathon', 'Microsoft.Insights/dataCollectionRules', 'MSCI-westus3-hackathon')]"
                             }
                         }
                     ]
@@ -811,7 +811,7 @@
         },
         {
             "type": "Microsoft.ContainerService/managedClusters/maintenanceConfigurations",
-            "name": "aks-hackathon/aksManagedAutoUpgradeSchedule",
+            "name": "hackathon/aksManagedAutoUpgradeSchedule",
             "apiVersion": "2025-05-01",
             "dependsOn": [
                 "[concat('Microsoft.ContainerService/managedClusters/', parameters('resourceName'))]"
@@ -836,7 +836,7 @@
         },
         {
             "type": "Microsoft.ContainerService/managedClusters/maintenanceConfigurations",
-            "name": "aks-hackathon/aksManagedNodeOSUpgradeSchedule",
+            "name": "hackathon/aksManagedNodeOSUpgradeSchedule",
             "apiVersion": "2025-05-01",
             "dependsOn": [
                 "[concat('Microsoft.ContainerService/managedClusters/', parameters('resourceName'))]"
@@ -977,7 +977,7 @@
                     "contentVersion": "1.0.0.0",
                     "resources": [
                         {
-                            "name": "MSProm-westus3-aks-hackathon",
+                            "name": "MSProm-westus3-hackathon",
                             "type": "Microsoft.Insights/dataCollectionEndpoints",
                             "location": "westus3",
                             "kind": "Linux",
@@ -989,7 +989,7 @@
                 }
             },
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "[concat('Microsoft.ContainerService/managedClusters/', parameters('resourceName'))]"
             ]
@@ -1007,11 +1007,11 @@
                         {
                             "type": "Microsoft.Insights/dataCollectionRules",
                             "location": "westus3",
-                            "name": "MSProm-westus3-aks-hackathon",
+                            "name": "MSProm-westus3-hackathon",
                             "apiVersion": "2022-06-01",
                             "kind": "Linux",
                             "properties": {
-                                "dataCollectionEndpointId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.Insights/dataCollectionEndpoints/MSProm-westus3-aks-hackathon",
+                                "dataCollectionEndpointId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.Insights/dataCollectionEndpoints/MSProm-westus3-hackathon",
                                 "dataSources": {
                                     "prometheusForwarder": [
                                         {
@@ -1026,7 +1026,7 @@
                                 "destinations": {
                                     "monitoringAccounts": [
                                         {
-                                            "accountResourceId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                            "accountResourceId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
                                             "name": "MonitoringAccount1"
                                         }
                                     ]
@@ -1052,7 +1052,7 @@
                 "Microsoft.Resources/deployments/CreateAzureMonitorWorkspace-20250902224157-32"
             ],
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon"
+            "resourceGroup": "hackathon"
         },
         {
             "type": "Microsoft.Resources/deployments",
@@ -1073,23 +1073,23 @@
                             "apiVersion": "2022-06-01",
                             "properties": {
                                 "description": "Association of data collection rule. Deleting this association will break the prometheus metrics data collection for this AKS Cluster.",
-                                "dataCollectionRuleId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.Insights/dataCollectionRules/MSProm-westus3-aks-hackathon"
+                                "dataCollectionRuleId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.Insights/dataCollectionRules/MSProm-westus3-hackathon"
                             },
-                            "id": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/microsoft.containerservice/managedclusters/aks-hackathon/providers/Microsoft.Insights/dataCollectionRuleAssociations/ContainerInsightsMetricsExtension",
-                            "scope": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/microsoft.containerservice/managedclusters/aks-hackathon"
+                            "id": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/microsoft.containerservice/managedclusters/hackathon/providers/Microsoft.Insights/dataCollectionRuleAssociations/ContainerInsightsMetricsExtension",
+                            "scope": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/microsoft.containerservice/managedclusters/hackathon"
                         }
                     ]
                 }
             },
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon"
+            "resourceGroup": "hackathon"
         },
         {
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-05-01",
             "name": "CreatePromRecordingRules-20250902224157-90",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "properties": {
                 "mode": "Incremental",
                 "template": {
@@ -1098,17 +1098,17 @@
                     "resources": [
                         {
                             "location": "westus3",
-                            "name": "NodeRecordingRulesRuleGroup-aks-hackathon",
+                            "name": "NodeRecordingRulesRuleGroup-hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "Node Recording Rules RuleGroup",
                                 "enabled": true,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "instance:node_num_cpu:sum",
@@ -1161,17 +1161,17 @@
                         },
                         {
                             "location": "westus3",
-                            "name": "KubernetesRecordingRulesRuleGroup-aks-hackathon",
+                            "name": "KubernetesRecordingRulesRuleGroup-hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "Kubernetes Recording Rules RuleGroup",
                                 "enabled": true,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate",
@@ -1268,17 +1268,17 @@
                         },
                         {
                             "location": "westus3",
-                            "name": "UXRecordingRulesRuleGroup - aks-hackathon",
+                            "name": "UXRecordingRulesRuleGroup - hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "UX Recording Rules for Linux",
                                 "enabled": true,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "ux:pod_cpu_usage:sum_irate",
@@ -1359,17 +1359,17 @@
                         },
                         {
                             "location": "westus3",
-                            "name": "NodeRecordingRulesRuleGroup-Win-aks-hackathon",
+                            "name": "NodeRecordingRulesRuleGroup-Win-hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "Node Recording Rules RuleGroup for Windows",
                                 "enabled": false,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "node:windows_node:sum",
@@ -1438,17 +1438,17 @@
                         },
                         {
                             "location": "westus3",
-                            "name": "NodeAndKubernetesRecordingRulesRuleGroup-Win-aks-hackathon",
+                            "name": "NodeAndKubernetesRecordingRulesRuleGroup-Win-hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "Node and Kubernetes Recording Rules RuleGroup for Windows",
                                 "enabled": false,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "node:windows_node_filesystem_usage:",
@@ -1525,17 +1525,17 @@
                         },
                         {
                             "location": "westus3",
-                            "name": "UXRecordingRulesRuleGroup-Win - aks-hackathon",
+                            "name": "UXRecordingRulesRuleGroup-Win - hackathon",
                             "type": "Microsoft.AlertsManagement/prometheusRuleGroups",
                             "properties": {
                                 "description": "UX Recording Rules for Windows",
                                 "enabled": false,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama",
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourceGroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "interval": "PT1M",
-                                "clusterName": "aks-hackathon",
+                                "clusterName": "hackathon",
                                 "rules": [
                                     {
                                         "record": "ux:pod_cpu_usage_windows:sum_irate",
@@ -1587,7 +1587,7 @@
             "apiVersion": "2019-05-01",
             "name": "CreateAzureMonitorWorkspace-20250902224157-32",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "Microsoft.Resources/deployments/CreatePromDCE-20250902224157-48"
             ],
@@ -1613,7 +1613,7 @@
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2019-05-01",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "name": "CreateGrafanaWorkspace-20250902224157-17",
             "properties": {
                 "mode": "Incremental",
@@ -1655,7 +1655,7 @@
             "apiVersion": "2019-05-01",
             "name": "AddAdministratorRoleForGrafana-20250902224157-71",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "Microsoft.Resources/deployments/CreateGrafanaWorkspace-20250902224157-17"
             ],
@@ -1671,7 +1671,7 @@
                             "name": "43a86244-9ce0-eeaf-7af3-5b687d3d0f67",
                             "scope": "microsoft.dashboard/grafana/grafana-hackathon",
                             "properties": {
-                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/microsoft.dashboard/grafana/grafana-hackathon/providers/Microsoft.Authorization/roleDefinitions/22926164-76b3-42b3-bc55-97df8dab3e41",
+                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/microsoft.dashboard/grafana/grafana-hackathon/providers/Microsoft.Authorization/roleDefinitions/22926164-76b3-42b3-bc55-97df8dab3e41",
                                 "principalId": "2cd246d6-d60e-49cb-8533-ddb9495f602d"
                             }
                         }
@@ -1684,7 +1684,7 @@
             "apiVersion": "2019-05-01",
             "name": "AddMRRToGrafMSIForGraf-20250902224157-79",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "dependsOn": [
                 "Microsoft.Resources/deployments/CreateGrafanaWorkspace-20250902224157-17"
             ],
@@ -1699,7 +1699,7 @@
                             "apiVersion": "2022-04-01",
                             "name": "5f5eae03-dd44-885c-d3ec-30677d06ce01",
                             "properties": {
-                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/microsoft.dashboard/grafana/grafana-hackathon/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05",
+                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/microsoft.dashboard/grafana/grafana-hackathon/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05",
                                 "principalId": "[reference('CreateGrafanaWorkspace-20250902224157-17').outputs.msiPrincipalId.value]"
                             }
                         }
@@ -1711,7 +1711,7 @@
             "type": "Microsoft.Resources/deployments",
             "name": "AddMonitorDataReaderRoleAssignmentToGraphanaMS-20250902224157-43",
             "apiVersion": "2019-05-01",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
             "dependsOn": [
                 "Microsoft.Resources/deployments/CreateAzureMonitorWorkspace-20250902224157-32",
@@ -1730,10 +1730,10 @@
                             "apiVersion": "2022-04-01",
                             "name": "6b56c615-4dc2-76b0-7424-e557a631cd00",
                             "properties": {
-                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama/providers/Microsoft.Authorization/roleDefinitions/b0d8363b-8ddd-447d-831f-62ca05bff136",
+                                "roleDefinitionId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama/providers/Microsoft.Authorization/roleDefinitions/b0d8363b-8ddd-447d-831f-62ca05bff136",
                                 "principalId": "[reference('CreateGrafanaWorkspace-20250902224157-17').outputs.msiPrincipalId.value]"
                             },
-                            "scope": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama"
+                            "scope": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama"
                         }
                     ]
                 }
@@ -1743,7 +1743,7 @@
             "type": "Microsoft.Resources/deployments",
             "name": "AddAMWIntegrationToGrafana-20250902224157-18",
             "apiVersion": "2019-05-01",
-            "resourceGroup": "aks-hackathon",
+            "resourceGroup": "hackathon",
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
             "properties": {
                 "mode": "Incremental",
@@ -1760,7 +1760,7 @@
                                 "grafanaIntegrations": {
                                     "azureMonitorWorkspaceIntegrations": [
                                         {
-                                            "azureMonitorWorkspaceResourceId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.monitor/accounts/hackathon-ama"
+                                            "azureMonitorWorkspaceResourceId": "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.monitor/accounts/hackathon-ama"
                                         }
                                     ]
                                 }
@@ -1797,7 +1797,7 @@
                             "type": "microsoft.containerservice/managedclusters",
                             "location": "[parameters('location')]",
                             "sku": "[parameters('clusterSku')]",
-                            "name": "aks-hackathon",
+                            "name": "hackathon",
                             "properties": {
                                 "kubernetesVersion": "[parameters('kubernetesVersion')]",
                                 "enableRBAC": "[parameters('enableRBAC')]",
@@ -1917,14 +1917,14 @@
                 }
             },
             "subscriptionId": "b491bf98-6ea2-4a07-a641-200d61d7a735",
-            "resourceGroup": "aks-hackathon"
+            "resourceGroup": "hackathon"
         },
         {
             "name": "InsightsMetricAlertsDepl-7f71ce01-86d8-4611-23f9-2120ab82308c",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
             "dependsOn": [
-                "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
             ],
             "properties": {
                 "mode": "Incremental",
@@ -1935,13 +1935,13 @@
                         {
                             "type": "microsoft.insights/metricAlerts",
                             "apiVersion": "2018-03-01",
-                            "name": "CPU Usage Percentage - aks-hackathon",
+                            "name": "CPU Usage Percentage - hackathon",
                             "location": "Global",
                             "properties": {
                                 "severity": 3,
                                 "enabled": true,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "evaluationFrequency": "PT5M",
                                 "windowSize": "PT5M",
@@ -1974,13 +1974,13 @@
                         {
                             "type": "microsoft.insights/metricAlerts",
                             "apiVersion": "2018-03-01",
-                            "name": "Memory Working Set Percentage - aks-hackathon",
+                            "name": "Memory Working Set Percentage - hackathon",
                             "location": "Global",
                             "properties": {
                                 "severity": 3,
                                 "enabled": true,
                                 "scopes": [
-                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/aks-hackathon/providers/Microsoft.ContainerService/managedClusters/aks-hackathon"
+                                    "/subscriptions/b491bf98-6ea2-4a07-a641-200d61d7a735/resourcegroups/hackathon/providers/Microsoft.ContainerService/managedClusters/hackathon"
                                 ],
                                 "evaluationFrequency": "PT5M",
                                 "windowSize": "PT5M",

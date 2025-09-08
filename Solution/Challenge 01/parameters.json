@@ -6,13 +6,13 @@
             "value": "2025-05-01"
         },
         "resourceName": {
-            "value": "aks-hackathon1"
+            "value": "hackathon"
         },
         "location": {
             "value": "westus3"
         },
         "dnsPrefix": {
-            "value": "aks-hackathon-dns"
+            "value": "hackathon-dns"
         },
         "kubernetesVersion": {
             "value": "1.32.6"
