@@ -21,4 +21,4 @@ To create your AKS cluster run `az deployment group create --resource-group <res
 ## Success Criteria
 
 1. Your az cli command begins to invoke.
-2. The command completes succesfully after ~5 minutes.
+2. The command completes succesfully after ~10 minutes.
