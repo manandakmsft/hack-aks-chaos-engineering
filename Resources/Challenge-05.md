@@ -34,4 +34,7 @@ If you are completing the challenge through the portal, the command to get the o
 3. Azure managed Grafana created 
 4. Grafana and Prometheus are linked to your AKS cluster
 5. Access to managed Grafana dashboards
+6. Grafana MI has monitoring reader permissions on Azure monitoring workspace
+7. Current user has Grafana Viewer permissions
+8. Current user has monitoring contributor permissions on Azure monitoring workspace
 

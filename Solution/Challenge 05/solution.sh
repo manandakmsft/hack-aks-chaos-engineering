@@ -2,12 +2,19 @@ CLUSTER_NAME="<cluster-name>"
 RESOURCE_GROUP="<rg>"
 AMW_NAME="<workspace-name>"
 GRAFANA_NAME="<grafana-name"
-LOCATION="<location>"
+LOCATION="<location>">
 
 # Get your Entra ID (AAD) user object ID
 # This may fail if ran in the portal
-ME_OBJECT_ID="$(az ad signed-in-user show --query id -o tsv)"
+#Run locally and copy result into bash prompt in the portal
+#$(az ad signed-in-user show --query id -o tsv)
+#fill in result of above command for ME_OBJECT_ID
+ME_OBJECT_ID=""
 
+
+##### For the most reliable experience, run the below commands one at a time
+#querying for a resource id right after object creation sometime results in empty string
+# and assigning roles can take some time to propagate
 
 #create Azure monitor account
 az monitor account create \
