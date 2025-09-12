@@ -3,7 +3,7 @@
 # =========================
 # Parameters (edit as needed)
 # =========================
-LOCATION="westus3"            # e.g., eastus
+LOCATION="<location>"            # e.g., eastus
 RESOURCE_GROUP="<rg>"
 CLUSTER_NAME="<cluster-name>"
 SYSTEM_POOL_NAME="systempool"
@@ -19,7 +19,7 @@ az group create \
   --location $LOCATION
 
 # =========================
-# Create AKS Cluster with System Node Pool
+# Create AKS Cluster with system Node Pool
 # =========================
 echo 'Creating AKS cluster...'
 az aks create \

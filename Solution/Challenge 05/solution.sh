@@ -1,16 +1,13 @@
 CLUSTER_NAME="<cluster-name>"
 RESOURCE_GROUP="<rg>"
-AMW_NAME="amw-hackathon"
-GRAFANA_NAME="hackaton-grafana"
-LOCATION="westus3"
-# AMW_ID=""
-# GRAFANA_ID=""
-# GRAFANA_MI=""
-# Get your Entra ID (AAD) user object ID
-# ME_OBJECT_ID="$(az ad signed-in-user show --query id -o tsv)"
+AMW_NAME="<workspace-name>"
+GRAFANA_NAME="<grafana-name"
+LOCATION="<location>"
 
-#enable Prometheus scraping
-# az aks update --enable-azure-monitor-metrics --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP
+# Get your Entra ID (AAD) user object ID
+# This may fail if ran in the portal
+ME_OBJECT_ID="$(az ad signed-in-user show --query id -o tsv)"
+
 
 #create Azure monitor account
 az monitor account create \
@@ -51,10 +48,9 @@ echo 'Granting reader permissions to Azure monitor workspace...'
 echo 'Monitoring Reader added to workspace.' 
   
 echo 'Adding Grafana viewer role to current user...'
-#grafana reader
 # Grant Grafana Viewer on the Grafana resource
 az role assignment create \
-  --assignee-object-id "2cd246d6-d60e-49cb-8533-ddb9495f602d" \
+  --assignee-object-id "$ME_OBJECT_ID" \
   --assignee-principal-type User \
   --role "Grafana Viewer" \
   --scope "$GRAFANA_ID"
@@ -62,7 +58,7 @@ az role assignment create \
 # #add AMW monitoring contributor 
 echo 'Grant Monitoring contributor to current user on Azure monitor workspace...'
 az role assignment create \
-  --assignee-object-id "2cd246d6-d60e-49cb-8533-ddb9495f602d" \
+  --assignee-object-id "$ME_OBJECT_ID" \
   --assignee-principal-type User \
   --role "Monitoring Contributor" \
   --scope "$AMW_ID"
