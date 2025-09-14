@@ -10,24 +10,21 @@ In this challenge, you will create experiments that mimic real world faults and 
 
 ### Create following experiments in Azure Choas studio
 
-- Experiment 01: **Spike the content-api pod CPU to 100**
+#### Chaos Experiments targeting Application
+- **NOTE:** Sample JSON to create an experiment can be found in the `Manifests/Challenge-04/` folder.
+- **NOTE:** To learn more about supported parameters used by Chaos Mesh, refer https://chaos-mesh.org/docs/simulate-network-chaos-on-kubernetes/
+
+- Experiment 01: **Spike the content-api pod CPU**
    - Use system assigned identity & built in roles for experiment Permissions
    - Use "chaos mesh stress chaos" fault for this experiment
    - Use the json file in `/manifest/Challenge 04/` folder to create the experiment
    - Select the AKS cluster as Target Resource.
 
-
-### Run the Experiments from Azure Portal 
-
-- **NOTE:** Sample YAML files to get you started can be found in the `Manifests/Challenge-02/` folder.
-- Configuration details:
-  - Number of pods: 1
-  - Service: Internal
-  - Port and Target Port: 3001
-  - CPU: 0.5
-  - Memory: 128MB
-- Make sure you correctly set the CPU & Memory resource requests specified above.
-
+- Experiment 02: **Spike the content-api pod memory**
+   - Use system assigned identity & built in roles for experiment Permissions
+   - Use "chaos mesh stress chaos" fault for this experiment
+   - Use the json file in `/manifest/Challenge 04/` folder to create the experiment
+   - Select the AKS cluster as Target Resource.
 
 ## Success Criteria
 
