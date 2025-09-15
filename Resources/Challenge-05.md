@@ -28,7 +28,5 @@ Grafana is used to visualize the metrics that Prometheus collects.  It offers a 
 3. Azure managed Grafana created 
 4. Grafana and Prometheus are linked to your AKS cluster
 5. Access to managed Grafana dashboards
-6. Grafana MI has monitoring reader permissions on Azure monitoring workspace
-7. Current user has Grafana Viewer permissions
-8. Current user has monitoring contributor permissions on Azure monitoring workspace
+
 
