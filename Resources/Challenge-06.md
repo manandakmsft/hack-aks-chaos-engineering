@@ -1,10 +1,9 @@
-# Challenge 06 - Setting up telemetry and performance dashboards
+# Challenge 06 - Rearchitecting the application deployment to make it more reliable & resilient against failures
 
-[< Previous Challenge](./Challenge-04.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-06.md)
+[< Previous Challenge](./Challenge-05.md) - **[Home](../README.md)** 
 
 ## Introduction
 
-In this challenge we will review resources created in Challenge 01 for investigating the performance and behavior of our cluster.
-## Description
-In this challenge we learn of the different monitoring options available for determining the health of your AKS cluster and what each service offers.  An Azure monitor workspace, Grafana and Prometheus instance are needed.
+In this challenge based on the observations/learning we got from injecting controlled faults into the application & AKS nodes, we will re design the application/deployment to make it more resilient against failures.
+
 
