@@ -13,7 +13,7 @@ In this hack, you will gain hands-on experience with Azure Kubernetes Service—
 ## Challenges
 
 - Challenge 01: **[Deploying an AKS cluster](Resources/Challenge-01.md)**
-	 - Deploy a production grade AKS cluster using ARM template
+	 - Deploy a production grade AKS cluster
 - Challenge 02: **[Deploying a three-tier application on AKS](Resources/Challenge-02.md)**
 	 - Deploying a three-tier application on AKS. The application contains a frontend , backend and a mongodb database using Persistant Storage.
 - Challenge 03: **[Installing Chaos Mesh in AKS and registering the cluster as a target in Azure Chaos Studio](Resources/Challenge-03.md)**
