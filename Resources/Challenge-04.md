@@ -22,8 +22,10 @@ In this challenge, you will create experiments that mimic real world faults and 
 
 #### Chaos Experiments targeting AKS Nodes
 
-- Experiment 01: Bring Down one AZ for 5 mins
-- 
+- Experiment 01: Bring Down all nodes of one AZ for 5 mins
+- Experiment 02: Spike memory on the node for 5 mins
+- Experiment 03: Spike cpu on the node for 5 mins
+- Experiment 04: Spike disk IO on the node for 5 mins
 
 ## Success Criteria
 
