@@ -1,0 +1,40 @@
+
+// Memory Spike
+
+{
+  "mode": "one",
+  "selector": {
+    "namespaces": [
+      "default"
+    ],
+    "labelSelectors": {
+      "app": "content-api-v2"
+    }
+  },
+  "stressors": {
+    "memory": {
+      "workers": 1,
+      "size": "256MB"
+    }
+  }
+}
+
+// Network Delay
+
+{
+   "action":"delay",
+   "mode":"all",
+   "selector":{
+      "namespaces":[
+         "default"
+      ],
+      "labelSelectors":{
+         "app": "content-api-v2"
+      }
+   },
+   "delay":{
+      "latency":"2000ms",
+      "correlation":"100",
+      "jitter":"0ms"
+   }
+}
