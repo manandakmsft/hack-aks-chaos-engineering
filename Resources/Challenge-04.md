@@ -14,11 +14,11 @@ In this challenge, you will create experiments that mimic real world faults and 
 - **NOTE:** Sample JSON to create an experiment can be found in the `Manifests/Challenge-04/` folder.
 - **NOTE:** To learn more about supported parameters used by Chaos Mesh, refer https://chaos-mesh.org/docs/simulate-network-chaos-on-kubernetes/
 
-- Experiment 01: **Spike CPU on the content-api pod**
-- Experiment 02: **Spike memory on the content-api pod**
-- Experiment 03: **Simulate a pod failure on the Mongo DB Pod**
-- Experiment 04: **Simulate a DNS failure on the content-api pod so that it fails to resolve the Mongo DB Service**
-- Experiment 05: **Simulate a N/W latency on the content-api pod**
+- Experiment 01: Spike CPU on the content-api pod
+- Experiment 02: Spike memory on the content-api pod
+- Experiment 03: Simulate a pod failure on the Mongo DB Pod
+- Experiment 04: Simulate a DNS failure on the content-api pod so that it fails to resolve an external Service (www.weatherapi.com) used to fetch weather information
+- Experiment 05: Simulate a N/W latency on the content-api pod
 
 ## Success Criteria
 
