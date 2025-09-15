@@ -13,11 +13,12 @@ Prometheus provides time series metrics such as CPU, memory and network stats an
 
 Grafana is used to visualize the metrics that Prometheus collects.  It offers a rich suite of visualizations, custom dashboards and alerts for keeping tabs on your AKS environment.  Both Prometheus and Grafana can be self-hosted in a cluster, however, Azure offers a managed version of both.
 
-Create an Azure monitor resource
+- **Steps:** 
+  - Create an Azure monitor resource
 
-Create an azure Managed Grafana Instance
+  - Create an azure Managed Grafana Instance
 
-Link Azure Monitor and Azure Managed Grafana to the AKS cluster
+  - Link Azure Monitor and Azure Managed Grafana to the AKS cluster
 
 
 ## Success Criteria
