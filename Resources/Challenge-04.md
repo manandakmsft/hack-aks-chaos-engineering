@@ -30,4 +30,4 @@ In this challenge, you will create experiments that mimic real world faults and 
 ## Success Criteria
 
 1. Ensure the experiments are executed successfully
-2. Check who the application behave while the experiments are running.
+2. Check how the application behave while the experiments are running.
