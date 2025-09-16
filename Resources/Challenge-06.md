@@ -16,3 +16,7 @@ Based on the chaos experiments that was conducted, below given are some of the d
 - Use horizontal pod autoscaling to scale up the number of pods during peak traffic which causes cpu & memory of pods to spike
 - Use cluster auto scaler to ensure that new pods created by HPA gets scheduled on a newly created node if existing nodes are full.
 - Use liveness & readiness probes on the deployment. Readiness probe ensures a backend pod receive traffic only when its ready, while liveness probe ensures it stays healthy and restarts if it fails.
+
+## Success Criteria
+
+Go through the above Best practises and make changes to the app deployments to improve resiliency
