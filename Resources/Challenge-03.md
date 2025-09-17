@@ -1,4 +1,4 @@
-# Challenge 03 - Deploy Chaos Mesh into the AKS cluster
+# Challenge 03 - Installing Chaos Mesh in AKS and registering the cluster & VMSS as a target in Azure Chaos Studio
 
 [< Previous Challenge](./Challenge-02.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-04.md)
 
