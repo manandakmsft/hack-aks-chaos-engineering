@@ -10,7 +10,7 @@ In this challenge based on the observations/learning we got from injecting contr
 ## Description
 Based on the chaos experiments that was conducted, below given are some of the design best practices which improves the application resiliency
 
-- Use Persistent Volumes for Database. If not if a Pod gets deleted, all data is lost
+- Use Persistent Volumes for Database. If not if a Pod gets deleted, all data is lost. Also make sure you are using ZRS PV and not LRS PV
 - All applications should have multiple replicas. This way even if one of the nodes goes down, there is another replica which is serving traffic
 - Spread the application on nodes which are in different AZ's using topology spread contstraints. This way even if one AZ goes down, application isnt fully unavailable.
 - Use horizontal pod autoscaling to scale up the number of pods during peak traffic which causes cpu & memory of pods to spike
